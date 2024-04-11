@@ -8,7 +8,7 @@
   imports =
     [
       <nixos-hardware/asus/zephyrus/ga503>
-      (./. + "../../../system/hardware-configuration.nix")
+      ./hardware-configuration.nix
       (./. + "../../../system/hardware/nvidia.nix")
       (./. + "../../../system/hardware/opengl.nix")
       (./. + "../../../system/hardware/pipewire.nix")

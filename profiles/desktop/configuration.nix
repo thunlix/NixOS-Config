@@ -7,7 +7,7 @@
 {
   imports =
     [ # Include the results of the hardware scan.
-      (./. + "../../../system/hardware-configuration.nix")
+      ./hardware-configuration.nix
       (./. + "../../../system/hardware/nvidia.nix")
       (./. + "../../../system/hardware/opengl.nix")
       (./. + "../../../system/hardware/pipewire.nix")
