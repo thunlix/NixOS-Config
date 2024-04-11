@@ -6,9 +6,10 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-23.11";
     home-manager.url = "github:nix-community/home-manager/release-23.11";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }:
+  outputs = { self, nixpkgs, home-manager, nixos-hardware, ... }:
     let
       # -------- System Settings -------- #
       systemSettings = {
@@ -46,6 +47,18 @@
             inherit pkgs;
 	    inherit systemSettings;
 	    inherit userSettings;
+          };
+        };
+	zephy = systemSettings.lib.nixosSystem {
+          system = systemSettings.system;
+          modules = [
+	    nixos-hardware.nixosModules.asus-zephyrus-ga503; 
+	    (./. + "/profiles" + ("/" + systemSettings.profile) + "/configuration.nix")
+          ];
+          specialArgs = {
+            inherit pkgs;
+            inherit systemSettings;
+            inherit userSettings;
           };
         };
       };
