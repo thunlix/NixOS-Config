@@ -52,7 +52,7 @@
 	zephy = systemSettings.lib.nixosSystem {
           system = systemSettings.system;
           modules = [
-	    nixos-hardware.nixosModules.asus-zephyrus-ga503; 
+	    nixos-hardware.nixosModules.asus-zephyrus-ga503 
 	    (./. + "/profiles" + ("/" + systemSettings.profile) + "/configuration.nix")
           ];
           specialArgs = {
