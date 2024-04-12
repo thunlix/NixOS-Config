@@ -13,7 +13,7 @@
     let
       # -------- System Settings -------- #
       systemSettings = {
-        profile = "desktop";
+        profile = "laptop";
 	lib = nixpkgs.lib;
         system = "x86_64-linux";
 	hostname = if (systemSettings.profile == "desktop") then "desky" else "zephy";
