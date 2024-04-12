@@ -4,6 +4,7 @@
   imports = [
     #(./. + "../../../user/app/1password.nix")
     #(./. + "../../../user/app/logseq.nix")
+    (./. + "../../../user/pkgs/pokemon-colorscripts.nix")
     (./. + "../../../user/app/distrobox.nix")
     (./. + "../../../user/app/wofi.nix")
     (./. + "../../../user/app/dunst.nix")
