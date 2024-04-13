@@ -3,6 +3,7 @@
 
   imports = [
     #(./. + "../../../user/app/logseq.nix")
+    (./. + "../../../user/app/libappindicator.nix")
     (./. + "../../../user/app/mpd.nix")
     (./. + "../../../user/app/lm_sensors.nix")
     (./. + "../../../user/app/distrobox.nix")
