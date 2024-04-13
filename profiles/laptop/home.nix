@@ -6,16 +6,17 @@
     #(./. + "../../../user/app/logseq.nix")
     # Getting infinite recursive error when building pokemon-colorscripts.nix
     #(./. + "../../../user/pkgs/pokemon-colorscripts.nix")
-    (./. + "../../../user/app/distrobox.nix")
-    (./. + "../../../user/app/wofi.nix")
-    (./. + "../../../user/app/dunst.nix")
-    (./. + "../../../user/app/dev/git.nix")
-    (./. + "../../../user/app/term/foot.nix")
-    (./. + "../../../user/app/editor/emacs.nix")
-    (./. + "../../../user/app/sync/syncthing.nix")
-    (./. + "../../../user/shell/sh.nix")
-    (./. + "../../../user/app/browser/librewolf.nix")
-    (./. +  "../../../user/wm"+("/"+userSettings.wm+"/"+userSettings.wm)+".nix") # My window manager selected from flake
+    (./. + "../../../profiles/desktop/home.nix")
+    #(./. + "../../../user/app/distrobox.nix")
+    #(./. + "../../../user/app/wofi.nix")
+    #(./. + "../../../user/app/dunst.nix")
+    #(./. + "../../../user/app/dev/git.nix")
+    #(./. + "../../../user/app/term/foot.nix")
+    #(./. + "../../../user/app/editor/emacs.nix")
+    #(./. + "../../../user/app/sync/syncthing.nix")
+    #(./. + "../../../user/shell/sh.nix")
+    #(./. + "../../../user/app/browser/librewolf.nix")
+    #(./. +  "../../../user/wm"+("/"+userSettings.wm+"/"+userSettings.wm)+".nix") # My window manager selected from flake
   ];
   # Home Manager needs a bit of information about you and the paths it should
   # manage.

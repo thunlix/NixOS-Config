@@ -3,6 +3,7 @@
 
   imports = [
     #(./. + "../../../user/app/logseq.nix")
+    (./. + "../../../user/app/lm_sensors.nix")
     (./. + "../../../user/app/distrobox.nix")
     (./. + "../../../user/app/wofi.nix")
     (./. + "../../../user/app/dunst.nix")
