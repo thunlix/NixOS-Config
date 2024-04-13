@@ -3,8 +3,10 @@
   services.mpd = {
     enable = true;
     musicDirectory = "/home/thunlix/Music";
-    network.listenAddress = "any";
-    startWhenNeeded = true;
+    network = {
+      listenAddress = "any";
+      startWhenNeeded = true;
+    };
     extraConfig = ''
       audio_output {
         type "pipewire"
