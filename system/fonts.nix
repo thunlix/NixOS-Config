@@ -7,6 +7,6 @@
     nerdfonts
     fira-code
     fira-code-symbols
-    (nerdfonts.override { fonts = [ "FiraCode" "NotoSans"]; })
+    (nerdfonts.override { fonts = [ "FiraCode" ]; })
   ];
 }
