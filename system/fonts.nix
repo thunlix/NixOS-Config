@@ -5,5 +5,8 @@
     jetbrains-mono
     noto-fonts
     nerdfonts
+    fira-code
+    fira-code-symbols
+    (nerdfonts.override { fonts = [ "Fira Code" ]; })
   ];
 }
