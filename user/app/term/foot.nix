@@ -9,7 +9,8 @@
         pad = "10x10";
       };
       colors = {
-        alpha = 0;
+        alpha = 0.5;
+	background = 484b5b;
       };
     };
   };
