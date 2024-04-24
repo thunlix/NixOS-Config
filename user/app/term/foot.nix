@@ -5,7 +5,7 @@
     enable = true;
     settings = {
       main = {
-        font = "JetBrains Mono:size=16";
+        font = "JetBrains Mono:size=14";
         pad = "10x10";
       };
       colors = {
