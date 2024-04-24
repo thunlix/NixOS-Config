@@ -180,6 +180,6 @@ window {
 #entry:drop(active) {
   background-color: @lavender!important;
 }
-''
+'';
   };
 }
