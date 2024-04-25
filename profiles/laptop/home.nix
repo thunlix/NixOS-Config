@@ -1,4 +1,4 @@
-{ config, pkgs, userSettings, ... }:
+{ config, pkgs, unstable, userSettings, ... }:
 {
 
   imports = [
@@ -43,7 +43,7 @@
     pkgs.swww
     pkgs.hyprpaper
     pkgs.polkit_gnome
-    pkgs.ironbar
+    unstable.ironbar
     pkgs.python3
 
     # # It is sometimes useful to fine-tune packages, for example, by applying

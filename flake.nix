@@ -7,9 +7,10 @@
     home-manager.url = "github:nix-community/home-manager/release-23.11";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
+    unstablepkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
   };
 
-  outputs = { self, nixpkgs, home-manager, nixos-hardware, ... }:
+  outputs = { self, nixpkgs, home-manager, nixos-hardware, unstablepkgs, ... }:
     let
       # -------- System Settings -------- #
       systemSettings = {
@@ -37,7 +38,7 @@
 
       #pkgs = nixpkgs.legacyPackages.${systemSettings.system};
       pkgs = import nixpkgs { system = systemSettings.system; config.allowUnfree = true; };    
-
+      unstable = import unstablepkgs { system = systemSettings.system; config.allowUnfree = true; };
     in {
       nixosConfigurations = {
         desky = systemSettings.lib.nixosSystem {
@@ -45,6 +46,7 @@
 	  modules = [ (./. + "/profiles" + ("/" + systemSettings.profile) + "/configuration.nix") ];
           specialArgs = {
             inherit pkgs;
+	    inherit unstable;
 	    inherit systemSettings;
 	    inherit userSettings;
           };
@@ -57,6 +59,7 @@
           ];
           specialArgs = {
             inherit pkgs;
+            inherit unstable;
             inherit systemSettings;
             inherit userSettings;
           };
@@ -67,6 +70,7 @@
 	  inherit pkgs;
           modules = [ (./. + "/profiles" + ("/" + systemSettings.profile) + "/home.nix") ];
           extraSpecialArgs = {
+	    inherit unstable;
 	    inherit userSettings;
           };
         };
