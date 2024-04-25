@@ -1,6 +1,6 @@
 { pkgs, ... }:
 {
   home.packages = [
-    gucharmaps
+    gnome.gucharmaps
   ];
 }
