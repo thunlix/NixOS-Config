@@ -69,6 +69,12 @@
         "$modA, 4, movetoworkspace, 4"
         "$modA, 5, movetoworkspace, 5"
         "$mod, m, exit,"
+        ", code:71, exec, asusctl profile -n"
+        "$mod, C, movetoworkspace, special"
+      ];
+
+      windowrulev2 = [
+        "workspace[1], class:(footclient)"
       ];
 
       input = {
