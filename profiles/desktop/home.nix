@@ -1,8 +1,9 @@
-{ config, pkgs, userSettings, ... }:
+{ config, pkgs, unstable, userSettings, ... }:
 {
 
   imports = [
     #(./. + "../../../user/app/logseq.nix")
+    (./. + "../../../user/app/gucharmap.nix")
     (./. + "../../../user/app/gnome-font-viewer.nix")
     (./. + "../../../user/app/libappindicator.nix")
     (./. + "../../../user/app/mpd.nix")
@@ -42,7 +43,7 @@
     pkgs.swww
     pkgs.hyprpaper
     pkgs.polkit_gnome
-    pkgs.ironbar
+    unstable.ironbar
     pkgs.python3
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
