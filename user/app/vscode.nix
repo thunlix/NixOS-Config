@@ -1,4 +1,4 @@
 { pkgs, ... }:
 {
-  vscode.enabled = true;
+  programs.vscode.enabled = true;
 }
