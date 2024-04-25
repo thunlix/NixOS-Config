@@ -20,6 +20,8 @@
         "GBM_BACKEND,nvidia-drm"
         "__GLX_VENDOR_LIBRARY_NAME,nvidia"
         "WLR_NO_HARDWARE_CURSORS,1"
+        "ELECTRON_OZONE_PLATFORM_HINT,auto"
+        "NIXOS_OZONE_WL,1"
       ];
       decoration = {
         rounding = "10";
@@ -74,7 +76,9 @@
       ];
 
       windowrulev2 = [
-        "workspace[1], class:(footclient)"
+        "workspace 1, title:(foot)"
+	      "workspace 2, class:(librewolf)"
+	      "workspace 3, class:(Code)"
       ];
 
       input = {
