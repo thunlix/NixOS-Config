@@ -3,6 +3,7 @@
 
   imports = [
     #(./. + "../../../user/app/logseq.nix")
+    (./. + "../../../user/app/vscode.nix")
     (./. + "../../../user/app/gucharmap.nix")
     (./. + "../../../user/app/gnome-font-viewer.nix")
     (./. + "../../../user/app/libappindicator.nix")
@@ -45,7 +46,7 @@
     pkgs.polkit_gnome
     unstable.ironbar
     pkgs.python3
-    pkgs.sysinfo
+    pkgs.haskellPackages.sysinfo
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
     # # parentheses. Maybe you want to install Nerd Fonts with a limited number of
