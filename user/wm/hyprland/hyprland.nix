@@ -71,14 +71,19 @@
         "$modA, 4, movetoworkspace, 4"
         "$modA, 5, movetoworkspace, 5"
         "$mod, m, exit,"
-        ", code:71, exec, asusctl profile -n"
+        ", code:71, exec, /home/thunlix/.dotfiles/scripts/asus-profile-change"
+	", code:68, exec, /home/thunlix/.dotfiles/scripts/kbd-brightness-previous"
+	", code:69, exec, /home/thunlix/.dotfiles/scripts/kbd-brightness-next"
         "$mod, C, movetoworkspace, special"
+	", XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
+	", XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
+	", code:67, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
       ];
 
       windowrulev2 = [
         "workspace 1, title:(foot)"
-	      "workspace 2, class:(librewolf)"
-	      "workspace 3, class:(Code)"
+	"workspace 2, class:(librewolf)"
+	"workspace 3, class:(Code)"
       ];
 
       input = {

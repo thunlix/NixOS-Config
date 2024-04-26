@@ -1,0 +1,5 @@
+#!/bin/sh
+
+asusctl profile -n
+state=$(asusctl profile -p | awk -F ' ' '{print $4}')
+dunstify "Switched to profile $state"

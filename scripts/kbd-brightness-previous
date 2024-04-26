@@ -1,0 +1,16 @@
+#!/bin/sh
+
+asusctl -p
+brightness=$(asusctl -k | awk -F ' ' '{print $5}')
+if [[ $brightness -eq 0 ]]
+then
+  dunstify "Keyboard brightness set to Off"
+elif [[ $brightness -eq 1 ]]
+then
+  dunstify "Keyboard brightness set to Low"
+elif [[ $brightness -eq 2 ]]
+then
+  dunstify "Keyboard brightness set to Medium"
+else
+  dunstify "Keyboard brightness set to High"
+fi
