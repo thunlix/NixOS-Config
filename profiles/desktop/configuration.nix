@@ -8,6 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      (./. + "../../../system/login_manager.nix")
       (./. + "../../../system/hardware/nvidia.nix")
       (./. + "../../../system/hardware/opengl.nix")
       (./. + "../../../system/hardware/pipewire.nix")
