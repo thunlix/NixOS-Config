@@ -22,6 +22,7 @@
       # Laptop specific
       (./. + "../../../system/app/supergfxctl.nix")
       (./. + "../../../user/app/asusctl.nix")
+      (./. + "../../../system/auto-cpufreq.nix")
     ];
 
   # Bootloader.
