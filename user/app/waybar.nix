@@ -85,7 +85,7 @@
           format-linked = "{ifname} (No IP) ";
           format-disconnected = "Disconnected ⚠";
           format-alt = "{ifname}: {ipaddr}/{cidr}";
-          on-click-right = "bash ~/.config/rofi/wifi_menu/rofi_wifi_menu"
+          on-click-right = "bash ~/.config/rofi/wifi_menu/rofi_wifi_menu";
        };
        pulseaudio = {
          format = "{volume}% {icon}";
@@ -133,5 +133,6 @@
        };
       };
     };
+   };
   };
 }
