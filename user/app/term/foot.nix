@@ -10,7 +10,7 @@
       };
       colors = {
         alpha = 0.65;
-	background = "020202";
+	background = "0f0f19";
       };
     };
   };
