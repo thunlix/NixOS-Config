@@ -3,6 +3,7 @@
 
   imports = [
     #(./. + "../../../user/app/logseq.nix")
+    (./. + "../../../user/app/btop.nix")
     (./. + "../../../user/app/waybar.nix")
     (./. + "../../../user/app/wev.nix")
     (./. + "../../../user/app/vscode.nix")

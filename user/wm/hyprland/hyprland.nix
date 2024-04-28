@@ -120,8 +120,8 @@
       exec = [
         "foot --server"
         "hyprpaper"
-        #"ironbar"
-	"waybar"
+        "ironbar"
+	#"waybar"
       ];
     };
   };
