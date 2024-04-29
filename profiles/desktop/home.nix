@@ -3,6 +3,7 @@
 
   imports = [
     #(./. + "../../../user/app/logseq.nix")
+    (./. + "../../../user/app/ncmpcpp.nix")
     (./. + "../../../user/app/cava.nix")
     (./. + "../../../user/app/btop.nix")
     (./. + "../../../user/app/waybar.nix")
@@ -51,6 +52,7 @@
     unstable.ironbar
     pkgs.python3
     pkgs.haskellPackages.sysinfo
+    pkgs.bc
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
     # # parentheses. Maybe you want to install Nerd Fonts with a limited number of
