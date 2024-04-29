@@ -88,6 +88,7 @@
 	", XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
 	", XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
 	", code:67, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+        "$mod, L, exec, hyprlock"
       ];
 
       windowrulev2 = [
