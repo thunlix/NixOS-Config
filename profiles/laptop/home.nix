@@ -37,15 +37,8 @@
   home.packages = [
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.    
-    pkgs.gnome.gnome-software
-    pkgs.grim
-    pkgs.slurp
-    pkgs.swww
-    pkgs.hyprpaper
-    pkgs.polkit_gnome
-    unstable.ironbar
-    pkgs.python3
-
+    #pkgs.gnome.gnome-software
+    
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
     # # parentheses. Maybe you want to install Nerd Fonts with a limited number of

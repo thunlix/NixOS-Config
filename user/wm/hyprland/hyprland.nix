@@ -119,12 +119,12 @@
       };
 
       exec-once = [
-        ""
+        "swww-daemon --format xrgb"
       ];
 
       exec = [
         "foot --server"
-        "hyprpaper"
+        #"hyprpaper"
         "ironbar"
 	#"waybar"
       ];
