@@ -1,7 +1,9 @@
 { pkgs, config, ... }:
 {
-  environment.systemPackages = with pkgs; [
-    asusctl
-  ];
-  services.asusd.enable = true;
+  services = {
+    asusd = {
+      enable = true;
+      enableUserService = true;
+    };
+};
 }
