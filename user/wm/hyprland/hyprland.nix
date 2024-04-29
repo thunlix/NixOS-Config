@@ -1,12 +1,18 @@
-{ config, lib, pkgs, userSettings, systemSettings, ... }:
+{ config, lib, pkgs, unstable, userSettings, systemSettings, ... }:
 
 {
   # Enable idle manager for Wayland
-  services.swayidle.enable = true;
+  #services.swayidle.enable = true;
 
   # Enable Swaylock
-  programs.swaylock.enable = true;
-  programs.swaylock.package = pkgs.swaylock-effects;
+  #programs.swaylock.enable = true;
+  #programs.swaylock.package = pkgs.swaylock-effects;
+
+  # Enable Hypridle
+  home.packages = with unstable; [
+    hypridle
+    hyprlock
+  ];
 
   # Enable Hyprland
   wayland.windowManager.hyprland = {
