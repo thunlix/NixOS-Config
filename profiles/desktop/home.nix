@@ -3,6 +3,7 @@
 
   imports = [
     #(./. + "../../../user/app/logseq.nix")
+    (./. + "../../../user/app/xdg-desktop-portal-hyprland.nix")
     (./. + "../../../user/app/hyprpicker.nix")
     (./. + "../../../user/app/youtube-dl.nix")
     (./. + "../../../user/app/ncmpcpp.nix")
@@ -48,7 +49,8 @@
     # # "Hello, world!" when run.
     pkgs.grim
     pkgs.slurp
-    pkgs.swww
+    unstable.swww
+    unstable.waypaper
     pkgs.hyprpaper
     pkgs.polkit_gnome
     unstable.ironbar

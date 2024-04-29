@@ -23,6 +23,10 @@
         "ELECTRON_OZONE_PLATFORM_HINT,auto"
         "NIXOS_OZONE_WL,1"
       ];
+      # unscale XWayland
+      xwayland = {
+	force_zero_scaling = true;
+      };
       decoration = {
         rounding = "10";
         blur = {
@@ -42,7 +46,7 @@
       "$terminal" = userSettings.term;
       "$fileManager" = "nemo";
       "$terminalFloat" = "$terminal --title fly_is_foot";
-      "$drun" = "wofi --show drun";
+      "$drun" = "wofi --show drun --normal-window";
 
       bindm = [
         # mouse movements
@@ -85,6 +89,7 @@
 	"workspace 2, class:(librewolf)"
 	"workspace 3, class:(Code)"
 	"opacity 0.8 0.8, class:(ironbar)"
+	"stayfocused, class:(wofi)"
       ];
 
       input = {

@@ -15,7 +15,7 @@
       (./. + "../../../system/app/flatpak.nix")
       (./. + "../../../system/shell/fish.nix")
       (./. + "../../../system/wm/hyprland.nix")
-      (./. + "../../../system/wm/cinnamon.nix")
+     # (./. + "../../../system/wm/cinnamon.nix")
       (./. + "../../../system/printer.nix")
       (./. + "../../../system/fonts.nix")
     ];

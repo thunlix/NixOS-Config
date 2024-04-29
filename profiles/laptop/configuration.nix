@@ -9,6 +9,8 @@
     [
       #<nixos-hardware/asus/zephyrus/ga503>
       ./hardware-configuration.nix
+     # (./. + "../../../profiles/desktop/configuration.nix")
+      (./. + "../../../system/login_manager.nix")
       (./. + "../../../system/hardware/nvidia.nix")
       (./. + "../../../system/hardware/opengl.nix")
       (./. + "../../../system/hardware/pipewire.nix")
