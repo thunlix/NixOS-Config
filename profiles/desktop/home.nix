@@ -3,6 +3,7 @@
 
   imports = [
     #(./. + "../../../user/app/logseq.nix")
+    (./. + "../../../user/app/hyprpicker.nix")
     (./. + "../../../user/app/youtube-dl.nix")
     (./. + "../../../user/app/ncmpcpp.nix")
     (./. + "../../../user/app/cava.nix")
