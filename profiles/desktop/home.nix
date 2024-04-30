@@ -1,3 +1,4 @@
+
 { config, pkgs, unstable, userSettings, ... }:
 {
 
@@ -35,6 +36,35 @@
   home.username = userSettings.username;
   home.homeDirectory = "/home/" + userSettings.username;
 
+  # Set GTK mouse theme
+  gtk = {
+    enable = true;
+    theme = {
+      name = "Catppuccin-Mocha-Compact-Peach-Dark";
+      package = pkgs.catppuccin-gtk.override {
+        accents = ["peach"];
+        size = "compact";
+        variant = "mocha";
+      };
+    };
+
+    cursorTheme = {
+      name = "Catppuccin-Mocha-Peach-Cursors";
+      package = pkgs.catppuccin-cursors.mochaPeach;
+      size = 20;
+    };
+  };
+
+  qt.enable = true;
+  qt.platformTheme = "gtk";
+
+  home.pointerCursor = {
+    gtk.enable = true;
+    x11.enable = true;
+    package = pkgs.catppuccin-cursors.mochaPeach;
+    name = "Catppuccin-Mocha-Peach-Cursors";
+    size = 20;
+  };
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
   # introduces backwards incompatible changes.
@@ -59,6 +89,7 @@
     pkgs.python3
     pkgs.haskellPackages.sysinfo
     pkgs.bc
+    pkgs.wget
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
     # # parentheses. Maybe you want to install Nerd Fonts with a limited number of

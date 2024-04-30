@@ -10,6 +10,7 @@
       #<nixos-hardware/asus/zephyrus/ga503>
       ./hardware-configuration.nix
      # (./. + "../../../profiles/desktop/configuration.nix")
+      (./. + "../../../system/virtualisation.nix") 
       (./. + "../../../system/login_manager.nix")
       (./. + "../../../system/hardware/nvidia.nix")
       (./. + "../../../system/hardware/opengl.nix")
@@ -30,6 +31,25 @@
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+
+  # systemd tmp-files
+  systemd.tmpfiles.settings = {
+    "10-looking-glass.conf" = {
+      "/dev/shm/looking-glass" = {
+        f = {
+          group = "kvm";
+	  mode = "0660";
+	  user = "thunlix";
+        };
+      };
+    };
+  };
+
+  # Environmental variables
+  environment.sessionVariables = {
+    GSETTINGS_BACKEND = "keyfile";
+  };
+
 
   networking.hostName = systemSettings.hostname; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -72,7 +92,7 @@
   users.users.thunlix = {
     isNormalUser = true;
     description = "Thunlix";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "libvirtd" "kvm" "input" ];
     packages = with pkgs; [
       firefox
     #  thunderbird

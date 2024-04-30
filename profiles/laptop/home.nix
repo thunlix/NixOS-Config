@@ -17,6 +17,9 @@
     #(./. + "../../../user/shell/sh.nix")
     #(./. + "../../../user/app/browser/librewolf.nix")
     #(./. +  "../../../user/wm"+("/"+userSettings.wm+"/"+userSettings.wm)+".nix") # My window manager selected from flake
+    
+    # Laptop Specific
+    (./. + "../../../user/app/looking-glass.nix")
   ];
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
