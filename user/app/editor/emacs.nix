@@ -18,9 +18,9 @@
   programs.ripgrep.enable = true;
   
   # Enable emacs server daemon
-  services.emacs.enable = false;
+  services.emacs.enable = true;
   #services.emacs.package = import /home/thunlix/.emacs.d { pkgs = pkgs; };
-  services.emacs.install = true;
+  #services.emacs.install = true;
 
   # Enable pandoc
   programs.pandoc.enable = true;

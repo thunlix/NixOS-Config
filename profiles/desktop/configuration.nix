@@ -66,7 +66,7 @@
   users.users.thunlix = {
     isNormalUser = true;
     description = "Thunlix";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "libvirtd" ];
     packages = with pkgs; [
       firefox
     #  thunderbird
