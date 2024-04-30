@@ -16,10 +16,17 @@
 
   # Enable Ripgrep - Used by Doom Emacs
   programs.ripgrep.enable = true;
+  
+  # Enable emacs server daemon
+  services.emacs.enable = true;
+  services.emacs.package = import /home/thunlix/.emacs.d { pkgs = pkgs; };
 
+  # Enable pandoc
+  programs.pandoc.enable = true;
+  
   # Other supporting pkgs
   home.packages = with pkgs; [
     fd
-    
+    shellcheck
   ];
 }
