@@ -10,16 +10,17 @@
   };
   
   # Ensure Native Comp for Emacs
-  services.emacs.extraOptions = ''
-    "--with-native-compilation"
-  '';
+  #services.emacs.extraOptions = ''
+  #  "--with-native-compilation"
+  #'';
 
   # Enable Ripgrep - Used by Doom Emacs
   programs.ripgrep.enable = true;
   
   # Enable emacs server daemon
-  services.emacs.enable = true;
-  services.emacs.package = import /home/thunlix/.emacs.d { pkgs = pkgs; };
+  services.emacs.enable = false;
+  #services.emacs.package = import /home/thunlix/.emacs.d { pkgs = pkgs; };
+  services.emacs.install = true;
 
   # Enable pandoc
   programs.pandoc.enable = true;

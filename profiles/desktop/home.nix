@@ -3,6 +3,7 @@
 
   imports = [
     #(./. + "../../../user/app/logseq.nix")
+    (./. + "../../../user/app/virt-manager.nix") 
     (./. + "../../../user/app/brightnessctl.nix")
     (./. + "../../../user/app/xdg-desktop-portal-hyprland.nix")
     (./. + "../../../user/app/hyprpicker.nix")
