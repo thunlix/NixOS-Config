@@ -1,4 +1,4 @@
-{inputs, catppuccin, ...}: {
+{inputs, catppuccin, config, ...}: {
   gtk = {
     enable = true;
     catppuccin = {

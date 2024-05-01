@@ -39,15 +39,15 @@
 
   # Set GTK mouse theme
   gtk = {
-    enable = true;
-    theme = {
-      name = "Catppuccin-Mocha-Compact-Peach-Dark";
-      package = pkgs.catppuccin-gtk.override {
-        accents = ["peach"];
-        size = "compact";
-        variant = "mocha";
-      };
-    };
+    #enable = true;
+    #theme = {
+    #  name = "Catppuccin-Mocha-Compact-Peach-Dark";
+    #  package = pkgs.catppuccin-gtk.override {
+    #    accents = ["peach"];
+    #    size = "compact";
+    #    variant = "mocha";
+    #  };
+    #};
 
     cursorTheme = {
       name = "Catppuccin-Mocha-Peach-Cursors";
