@@ -3,9 +3,10 @@
 {
 
   imports = [
-    #(./. + "../../../user/app/logseq.nix")
+    (./. + "../../../user/app/logseq.nix")
     #(./. + "../../../user/app/virt-manager.nix")
     #(./. + "../../../user/gtk.nix") 
+    (./. + "../../../user/app/telegram-desktop.nix")
     (./. + "../../../user/app/brightnessctl.nix")
     (./. + "../../../user/app/xdg-desktop-portal-hyprland.nix")
     (./. + "../../../user/app/hyprpicker.nix")

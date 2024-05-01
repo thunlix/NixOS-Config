@@ -29,7 +29,7 @@
         "ELECTRON_OZONE_PLATFORM_HINT,auto"
         "NIXOS_OZONE_WL,1"
 	"GDK_BACKEND,wayland,x11,*"
-	"GDK_SCALE,2"
+	#"GDK_SCALE,2"
       ];
       # unscale XWayland
       xwayland = {
