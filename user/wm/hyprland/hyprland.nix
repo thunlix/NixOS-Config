@@ -97,6 +97,7 @@
 	"workspace 3, class:(Code)"
 	"opacity 0.8 0.8, class:(ironbar)"
 	"stayfocused, class:(wofi)"
+	"workspace 4, class:(looking-glass-client)"
       ];
 
       input = {

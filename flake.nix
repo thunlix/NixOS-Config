@@ -8,9 +8,10 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     unstablepkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    catppuccin.url = "github:catppuccin/nix";
   };
 
-  outputs = { self, nixpkgs, home-manager, nixos-hardware, unstablepkgs, ... }:
+  outputs = { self, nixpkgs, home-manager, nixos-hardware, unstablepkgs, catppuccin, ... }:
     let
       # -------- System Settings -------- #
       systemSettings = {
@@ -43,7 +44,10 @@
       nixosConfigurations = {
         desky = systemSettings.lib.nixosSystem {
           system = systemSettings.system;
-	  modules = [ (./. + "/profiles" + ("/" + systemSettings.profile) + "/configuration.nix") ];
+	  modules = [
+	    catppuccin.nixosModules.catppuccin 
+	    (./. + "/profiles" + ("/" + systemSettings.profile) + "/configuration.nix")
+	   ];
           specialArgs = {
             inherit pkgs;
 	    inherit unstable;
@@ -54,7 +58,8 @@
 	zephy = systemSettings.lib.nixosSystem {
           system = systemSettings.system;
           modules = [
-	    nixos-hardware.nixosModules.asus-zephyrus-ga503 
+	    nixos-hardware.nixosModules.asus-zephyrus-ga503
+	    catppuccin.nixosModules.catppuccin 
 	    (./. + "/profiles" + ("/" + systemSettings.profile) + "/configuration.nix")
           ];
           specialArgs = {
@@ -68,7 +73,10 @@
       homeConfigurations = {
         thunlix = home-manager.lib.homeManagerConfiguration {
 	  inherit pkgs;
-          modules = [ (./. + "/profiles" + ("/" + systemSettings.profile) + "/home.nix") ];
+          modules = [
+	    catppuccin.nixosModules.catppuccin
+	    (./. + "/profiles" + ("/" + systemSettings.profile) + "/home.nix")
+	  ];
           extraSpecialArgs = {
 	    inherit unstable;
 	    inherit userSettings;

@@ -50,7 +50,6 @@
     GSETTINGS_BACKEND = "keyfile";
   };
 
-
   networking.hostName = systemSettings.hostname; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
@@ -104,6 +103,7 @@
   environment.systemPackages = with pkgs; [
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   #  wget
+    linuxKernel.packages.linux_xanmod.kvmfr
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
