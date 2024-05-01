@@ -1,11 +1,11 @@
 
-{ config, pkgs, unstable, userSettings, ... }:
+{ config, pkgs, unstable, userSettings, catppuccin, ... }:
 {
 
   imports = [
     #(./. + "../../../user/app/logseq.nix")
     #(./. + "../../../user/app/virt-manager.nix")
-    (./. + "../../../user/gtk.nix") 
+    #(./. + "../../../user/gtk.nix") 
     (./. + "../../../user/app/brightnessctl.nix")
     (./. + "../../../user/app/xdg-desktop-portal-hyprland.nix")
     (./. + "../../../user/app/hyprpicker.nix")
@@ -39,19 +39,19 @@
 
   # Set GTK mouse theme
   gtk = {
-    #enable = true;
-    #theme = {
-    #  name = "Catppuccin-Mocha-Compact-Peach-Dark";
-    #  package = pkgs.catppuccin-gtk.override {
-    #    accents = ["peach"];
-    #    size = "compact";
-    #    variant = "mocha";
-    #  };
-    #};
+    enable = true;
+    theme = {
+        name = "Catppuccin-Mocha-Compact-Pink-Dark";
+        package = pkgs.catppuccin-gtk.override {
+        accents = ["pink"];
+        size = "compact";
+        variant = "mocha";
+      };
+    };
 
     cursorTheme = {
-      name = "Catppuccin-Mocha-Peach-Cursors";
-      package = pkgs.catppuccin-cursors.mochaPeach;
+      name = "Catppuccin-Mocha-Pink-Cursors";
+      package = pkgs.catppuccin-cursors.mochaPink;
       size = 20;
     };
   };
@@ -62,8 +62,8 @@
   home.pointerCursor = {
     gtk.enable = true;
     x11.enable = true;
-    package = pkgs.catppuccin-cursors.mochaPeach;
-    name = "Catppuccin-Mocha-Peach-Cursors";
+    package = pkgs.catppuccin-cursors.mochaPink;
+    name = "Catppuccin-Mocha-Pink-Cursors";
     size = 20;
   };
   # This value determines the Home Manager release that your configuration is

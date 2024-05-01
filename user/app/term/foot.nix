@@ -16,23 +16,23 @@
   };
 
   # Enable Starship
-  programs.starship = {
-    enable = true;
-    settings = {
-      format = "$directory$git_branch$character";
-      character = {
-        success_symbol = "[🞈](bright-green bold)";
-        error_symbol = "[🞈](bright-red)";
-        vicmd_symbol = "[🞈](bright-yellow)";
-      };
-      directory = {
-        #format = "[]($style)[(bg:white fg:black)$path](bg:white>
-        style = "bg:background fg:white";
-      };
-      git_branch = {
-        #format = "[]($style)[[ ](bg:white fg:black bold)$bra>
-        style = "bg:background fg:white";
-      };
+  programs.starship =
+    let
+      flavour = "mocha"; # One of `latte`, `frappe`, `macchiato`, or `mocha`
+    in
+    {
+      enable = true;
+      settings = {
+        # Other config here
+        format = "$all"; # Remove this line to disable the default prompt format
+        palette = "catppuccin_mocha";
+      } // builtins.fromTOML (builtins.readFile
+        (pkgs.fetchFromGitHub
+          {
+            owner = "catppuccin";
+            repo = "starship";
+            rev = "4b969dc174d9e0c4c7066d7447e1b1ba6901ba3b"; # Replace with the latest commit hash
+            sha256 = "sha256-nsRuxQFKbQkyEI4TXgvAjcroVdG+heKX5Pauq/4Ota0=";
+          } + /palettes/mocha.toml));
     };
-  };
 }
