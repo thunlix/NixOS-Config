@@ -1,7 +1,7 @@
 #!/run/current-system/sw/bin/bash
 
 ## Load VM variables
-source "/etc/libvirt/hooks/qemu.d/win10/vm-vars.conf"
+source "/var/lib/libvirt/hooks/qemu.d/win10/vm-vars.conf"
 
 ## Remove Hugepages
 echo "Releasing hugepage memory back to the host..."

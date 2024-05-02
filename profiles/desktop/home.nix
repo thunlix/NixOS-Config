@@ -3,6 +3,7 @@
 {
 
   imports = [
+    (./. + "../../../user/app/standardnotes.nix")
     (./. + "../../../user/app/wl-clipboard.nix")
     (./. + "../../../user/app/logseq.nix")
     (./. + "../../../user/app/webcord.nix")

@@ -1,7 +1,14 @@
 { config, lib, pkgs, unstable, userSettings, systemSettings, ... }:
 
 {
-  # Enable Hypridle and Hyprlock
+  # Enable idle manager for Wayland
+  #services.swayidle.enable = true;
+
+  # Enable Swaylock
+  #programs.swaylock.enable = true;
+  #programs.swaylock.package = pkgs.swaylock-effects;
+
+  # Enable Hypridle
   home.packages = with unstable; [
     hypridle
     hyprlock
@@ -21,7 +28,6 @@
         "WLR_NO_HARDWARE_CURSORS,1"
         "ELECTRON_OZONE_PLATFORM_HINT,auto"
         "NIXOS_OZONE_WL,1"
-	"GDK_BACKEND,wayland,x11,*"
 	#"GDK_SCALE,2"
       ];
       # unscale XWayland
@@ -105,13 +111,7 @@
 	"opacity 0.8 0.8, class:(ironbar)"
 	"stayfocused, class:(wofi)"
 	"workspace 4, class:(looking-glass-client)"
-	"workspace special silent, class:(Logseq)"
-	"workspace 3, class:(Emacs)"
       ];
-
-      #workspace = [
-	#"special,gapsout:5"
-      #];
 
       input = {
         kb_layout = "us";
@@ -152,8 +152,7 @@
         #"hyprpaper"
         "ironbar"
 	#"waybar"
-	#"$terminalSpecial"
-	"logseq"
+	"$terminalSpecial"
       ];
       misc = {
 	disable_hyprland_logo = true;

@@ -1,7 +1,7 @@
 #!/run/current-system/sw/bin/bash
 
 ## Load VM variables
-source "/etc/libvirt/hooks/qemu.d/win10/vm-vars.conf"
+source "/var/lib/libvirt/hooks/qemu.d/win10/vm-vars.conf"
 
 ## Calculate number of hugepages to allocate from memory (in MB)
 HUGEPAGES="$(($VM_MEMORY/$(($(grep Hugepagesize /proc/meminfo | awk '{print $2}')))))"
