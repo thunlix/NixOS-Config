@@ -42,6 +42,7 @@
           size = "3";
           passes = "1";
           vibrancy = "0.1696";
+	  xray = true;
         };
         "col.shadow" = "rgba(00000099)";
         drop_shadow = true;
@@ -65,7 +66,6 @@
       bind = [
         "$mod, RETURN, exec, $terminal"
         "$modA, RETURN, exec, $terminalFloat"
-        "$mod, space, exec, $drun"
         "$mod, Q, killactive,"
         "$mod, P, pseudo,"
         "$mod, J, togglesplit,"
@@ -86,15 +86,22 @@
         ", code:71, exec, /home/thunlix/.dotfiles/scripts/asus-profile-change"
 	", code:68, exec, /home/thunlix/.dotfiles/scripts/kbd-brightness-previous"
 	", code:69, exec, /home/thunlix/.dotfiles/scripts/kbd-brightness-next"
-        "$mod, C, movetoworkspace, special"
+        "$modA, C, movetoworkspace, special"
+	"$mod, C,togglespecialworkspace,"
 	", XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
 	", XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
 	", code:67, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
         "$mod, L, exec, hyprlock"
+	", code:72, exec, grim -g \"$(slurp -d)\" - | wl-copy"
+      ];
+
+      bindr = [
+	"$mod, space, exec, $drun"
       ];
 
       windowrulev2 = [
         "workspace 1, title:(foot)"
+	"float, title:(fly_is_foot)"
 	"workspace 2, class:(librewolf)"
 	"workspace 3, class:(Code)"
 	"opacity 0.8 0.8, class:(ironbar)"
@@ -104,6 +111,9 @@
 
       input = {
         kb_layout = "us";
+	touchpad = {
+	  middle_button_emulation = true;
+        };
       };
 
       general = {
@@ -130,6 +140,7 @@
 
       exec-once = [
         "swww-daemon --format xrgb"
+	"hypridle"
       ];
 
       exec = [
@@ -138,6 +149,9 @@
         "ironbar"
 	#"waybar"
       ];
+      misc = {
+	disable_hyprland_logo = true;
+      };
     };
   };
 }

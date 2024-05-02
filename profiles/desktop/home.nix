@@ -3,6 +3,7 @@
 {
 
   imports = [
+    (./. + "../../../user/app/wl-clipboard.nix")
     (./. + "../../../user/app/logseq.nix")
     (./. + "../../../user/app/webcord.nix")
     (./. + "../../../user/app/telegram-desktop.nix")
