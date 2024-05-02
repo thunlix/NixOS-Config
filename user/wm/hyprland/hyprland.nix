@@ -148,9 +148,9 @@
       ];
 
       exec = [
+	"ironbar"
         "foot --server"
         #"hyprpaper"
-        "ironbar"
 	#"waybar"
 	#"$terminalSpecial"
 	"logseq"
