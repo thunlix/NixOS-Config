@@ -137,6 +137,9 @@
     # EDITOR = "emacs";
   };
 
+  # Add paths to $PATH
+  home.sessionPath = ["$HOME/.config/emacs/bin"];
+
   # Let Home Manager install and manage itself
   programs.home-manager.enable = true;
 }

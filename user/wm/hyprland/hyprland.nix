@@ -21,12 +21,12 @@
         "WLR_NO_HARDWARE_CURSORS,1"
         "ELECTRON_OZONE_PLATFORM_HINT,auto"
         "NIXOS_OZONE_WL,1"
-	"GDK_BACKEND,wayland,x11,*"
-	#"GDK_SCALE,2"
+        "GDK_BACKEND,wayland,x11,*"
+        #"GDK_SCALE,2"
       ];
       # unscale XWayland
       xwayland = {
-	force_zero_scaling = true;
+        force_zero_scaling = true;
       };
       decoration = {
         rounding = "10";
@@ -35,7 +35,7 @@
           size = "3";
           passes = "1";
           vibrancy = "0.1696";
-	  xray = true;
+          xray = true;
         };
         "col.shadow" = "rgba(00000099)";
         drop_shadow = true;
@@ -78,51 +78,52 @@
         "$modA, 5, movetoworkspace, 5"
         "$mod, m, exit,"
         ", code:71, exec, /home/thunlix/.dotfiles/scripts/asus-profile-change"
-	", code:68, exec, /home/thunlix/.dotfiles/scripts/kbd-brightness-previous"
-	", code:69, exec, /home/thunlix/.dotfiles/scripts/kbd-brightness-next"
+        ", code:68, exec, /home/thunlix/.dotfiles/scripts/kbd-brightness-previous"
+        ", code:69, exec, /home/thunlix/.dotfiles/scripts/kbd-brightness-next"
         "$modA, C, movetoworkspace, special"
-	"$mod, C,togglespecialworkspace,"
-	", XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
-	", XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
-	", code:67, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+        "$mod, C,togglespecialworkspace,"
+        ", XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
+        ", XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
+        ", code:67, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
         "$mod, L, exec, hyprlock"
-	", code:72, exec, grim -g \"$(slurp -d)\" - | wl-copy"
-	", code:73, exec, brightnessctl -s set 10%-"
-	", code:74, exec, brightnessctl -s set -10%"
-	", code:156, togglespecialworkspace,"
+        ", code:72, exec, grim -g \"$(slurp -d)\" - | wl-copy"
+        ", code:73, exec, brightnessctl -s set 10%-"
+        ", code:74, exec, brightnessctl -s set -10%"
+        ", code:156, togglespecialworkspace,"
       ];
 
       bindr = [
-	"$mod, space, exec, $drun"
+        "$mod, space, exec, $drun"
       ];
 
       windowrulev2 = [
         "workspace 1, title:(foot)"
-	"float, title:(fly_is_foot)"
-	"workspace special silent, title:(special_foot)"
-	"workspace 2, class:(librewolf)"
-	"workspace 3, class:(Code)"
-	"opacity 0.8 0.8, class:(ironbar)"
-	"stayfocused, class:(wofi)"
-	"workspace 4, class:(looking-glass-client)"
-	"workspace special silent, class:(Logseq)"
-	"workspace 3, class:(Emacs)"
+        "float, title:(fly_is_foot)"
+        "workspace special silent, title:(special_foot)"
+        "workspace 2, class:(librewolf)"
+        "workspace 3, class:(Code)"
+        "opacity 0.8 0.8, class:(ironbar)"
+        "stayfocused, class:(wofi)"
+        "workspace 5, class:(looking-glass-client)"
+        "workspace 4, class:(Logseq)"
+        "workspace 3, class:(Emacs)"
+        "workspace special, title:(btop_foot)"
       ];
 
       #workspace = [
-	#"special,gapsout:5"
+        #"special,gapsout:5"
       #];
 
       input = {
         kb_layout = "us";
-	touchpad = {
-	  middle_button_emulation = true;
+        touchpad = {
+          middle_button_emulation = true;
         };
       };
 
       general = {
         gaps_in = "5";
-        gaps_out = "20";
+        gaps_out = "15";
         border_size = "2";
         "col.active_border" = "rgba(33ccffee) rgba(00ff99ee) 45deg";
         "col.inactive_border" = "rgba(595959aa)";
@@ -139,24 +140,24 @@
       };
 
       gestures = {
-	workspace_swipe = true;
+        workspace_swipe = true;
       };
 
       exec-once = [
         "swww-daemon --format xrgb"
-	"hypridle"
+        "hypridle"
       ];
 
       exec = [
-	"ironbar"
+        "ironbar"
         "foot --server"
         #"hyprpaper"
-	#"waybar"
-	#"$terminalSpecial"
-	"logseq"
+        #"waybar"
+        #"$terminalSpecial"
+        #"logseq"
       ];
       misc = {
-	disable_hyprland_logo = true;
+        disable_hyprland_logo = true;
       };
     };
   };

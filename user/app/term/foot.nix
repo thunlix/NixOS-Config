@@ -9,8 +9,8 @@
         pad = "10x10";
       };
       colors = {
-        alpha = 0.65;
-	background = "111016";
+        alpha = 0.4;
+        background = "111016";
       };
     };
   };

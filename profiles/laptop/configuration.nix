@@ -11,6 +11,7 @@
       ./hardware-configuration.nix
      # (./. + "../../../profiles/desktop/configuration.nix")
       #(./. + "../../../system/plymouth.nix")
+      (./. + "../../../system/hardware/bluetooth.nix")
       (./. + "../../../system/virtualisation.nix")
       (./. + "../../../system/libvirt-hooks.nix") 
       (./. + "../../../system/login_manager.nix")
