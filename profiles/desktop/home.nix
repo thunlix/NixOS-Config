@@ -3,6 +3,7 @@
 {
 
   imports = [
+    (./. + "../../../user/app/polkit-kde-agent.nix")
     (./. + "../../../user/app/standardnotes.nix")
     (./. + "../../../user/app/wl-clipboard.nix")
     (./. + "../../../user/app/logseq.nix")
