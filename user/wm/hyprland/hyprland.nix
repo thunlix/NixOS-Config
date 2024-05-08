@@ -99,6 +99,8 @@
       windowrulev2 = [
         "workspace 1, title:(foot)"
         "float, title:(fly_is_foot)"
+        "float, class:(org.kde.polkit-kde-authentication-agent-1)"
+        "stayfocused, class:(org.kde.polkit-kde-authentication-agent-1)"
         "workspace special silent, title:(special_foot)"
         "workspace 2, class:(librewolf)"
         "workspace 3, class:(Code)"
@@ -146,6 +148,7 @@
       exec-once = [
         "swww-daemon --format xrgb"
         "hypridle"
+        "/home/thunlix/.dotfiles/scripts/polkit-kde-agent"
       ];
 
       exec = [

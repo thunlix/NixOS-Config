@@ -15,7 +15,7 @@
       address = [ "10.10.10.2/32" ];
       dns = [ "10.10.10.1" ];
       listenPort = 51820; # to match firewall allowedUDPPorts (without this wg uses random port numbers)
-
+      autostart = false;
       # Path to the private key file.
       #
       # Note: The private key can also be included inline via the privateKey option,
