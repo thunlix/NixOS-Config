@@ -20,6 +20,7 @@
      # (./. + "../../../system/wm/cinnamon.nix")
       (./. + "../../../system/printer.nix")
       (./. + "../../../system/fonts.nix")
+      (./. + "../../../system/shadowsocks.nix")
     ];
 
   # Bootloader.

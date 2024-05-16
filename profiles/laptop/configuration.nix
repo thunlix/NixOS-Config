@@ -25,6 +25,7 @@
       (./. + "../../../system/wm/cinnamon.nix")
       (./. + "../../../system/printer.nix")
       (./. + "../../../system/fonts.nix")
+      (./. + "../../../system/shadowsocks.nix")
 
       # Laptop specific
       (./. + "../../../system/app/supergfxctl.nix")
