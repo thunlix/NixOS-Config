@@ -26,6 +26,7 @@
       (./. + "../../../system/printer.nix")
       (./. + "../../../system/fonts.nix")
       (./. + "../../../system/shadowsocks.nix")
+      (./. + "../../../system/waydroid.nix")
 
       # Laptop specific
       (./. + "../../../system/app/supergfxctl.nix")
