@@ -60,6 +60,7 @@
       bind = [
         "$mod, RETURN, exec, $terminal"
         "$modA, RETURN, exec, $terminalFloat"
+        "$mod, F, fullscreen,"
         "$mod, Q, killactive,"
         "$mod, P, pseudo,"
         "$mod, J, togglesplit,"
