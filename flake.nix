@@ -16,7 +16,7 @@
       # -------- System Settings -------- #
       systemSettings = {
         profile = "laptop";
-	lib = nixpkgs.lib;
+	      lib = nixpkgs.lib;
         system = "x86_64-linux";
 	hostname = if (systemSettings.profile == "desktop") then "desky" else "zephy";
 	timezone = "America/Chicago";

@@ -16,169 +16,180 @@
       columns = 2;
     };
     style = ''
-      @define-color	rosewater  #f5e0dc;
-@define-color	rosewater-rgb  rgb(245, 224, 220);
-@define-color	flamingo  #f2cdcd;
-@define-color	flamingo-rgb  rgb(242, 205, 205);
-@define-color	pink  #f5c2e7;
-@define-color	pink-rgb  rgb(245, 194, 231);
-@define-color	mauve  #cba6f7;
-@define-color	mauve-rgb  rgb(203, 166, 247);
-@define-color	red  #f38ba8;
-@define-color	red-rgb  rgb(243, 139, 168);
-@define-color	maroon  #eba0ac;
-@define-color	maroon-rgb  rgb(235, 160, 172);
-@define-color	peach  #fab387;
-@define-color	peach-rgb  rgb(250, 179, 135);
-@define-color	yellow  #f9e2af;
-@define-color	yellow-rgb  rgb(249, 226, 175);
-@define-color	green  #a6e3a1;
-@define-color	green-rgb  rgb(166, 227, 161);
-@define-color	teal  #94e2d5;
-@define-color	teal-rgb  rgb(148, 226, 213);
-@define-color	sky  #89dceb;
-@define-color	sky-rgb  rgb(137, 220, 235);
-@define-color	sapphire  #74c7ec;
-@define-color	sapphire-rgb  rgb(116, 199, 236);
-@define-color	blue  #89b4fa;
-@define-color	blue-rgb  rgb(137, 180, 250);
-@define-color	lavender  #b4befe;
-@define-color	lavender-rgb  rgb(180, 190, 254);
-@define-color	text  #cdd6f4;
-@define-color	text-rgb  rgb(205, 214, 244);
-@define-color	subtext1  #bac2de;
-@define-color	subtext1-rgb  rgb(186, 194, 222);
-@define-color	subtext0  #a6adc8;
-@define-color	subtext0-rgb  rgb(166, 173, 200);
-@define-color	overlay2  #9399b2;
-@define-color	overlay2-rgb  rgb(147, 153, 178);
-@define-color	overlay1  #7f849c;
-@define-color	overlay1-rgb  rgb(127, 132, 156);
-@define-color	overlay0  #6c7086;
-@define-color	overlay0-rgb  rgb(108, 112, 134);
-@define-color	surface2  #585b70;
-@define-color	surface2-rgb  rgb(88, 91, 112);
-@define-color	surface1  #45475a;
-@define-color	surface1-rgb  rgb(69, 71, 90);
-@define-color	surface0  #313244;
-@define-color	surface0-rgb  rgb(49, 50, 68);
-@define-color	base  #1e1e2e;
-@define-color	base-rgb  rgb(30, 30, 46);
-@define-color	mantle  #181825;
-@define-color	mantle-rgb  rgb(24, 24, 37);
-@define-color	crust  #11111b;
-@define-color	crust-rgb  rgb(17, 17, 27);
-
+  @background:     #1E2127FF;
+  @background-alt: #282B31FF;
+  @foreground:     #FFFFFFFF;
+  @selected:       #61AFEFFF;
+  @active:         #98C379FF;
+  @urgent:         #E06C75FF;
 * {
   font-family: 'JetBrains Mono', monospace;
   font-size: 14px;
+  background:     #1E2127FF;
+  background-alt: #282B31FF;
+  foreground:     #FFFFFFFF;
+  selected:       #61AFEFFF;
+  active:         #98C379FF;
+  urgent:         #E06C75FF;
 }
-
-/* Window */
+/*****----- Configuration -----*****/
+configuration {
+	modi:                       "drun";
+    show-icons:                 true;
+    display-drun:               "";
+	drun-display-format:        "{name}";
+}
+/*****----- Main Window -----*****/
 window {
-  margin: 0px;
-  padding: 10px;
-  border: 0.16em solid @lavender;
-  border-radius: 0.1em;
-  background-color: @base;
-  animation: slideIn 0.5s ease-in-out both;
+    transparency:                "real";
+    location:                    center;
+    anchor:                      center;
+    fullscreen:                  true;
+    width:                       1366px;
+    height:                      768px;
+    x-offset:                    0px;
+    y-offset:                    0px;
+
+    enabled:                     true;
+    margin:                      0px;
+    padding:                     0px;
+    border:                      0px solid;
+    border-radius:               0px;
+    border-color:                @selected;
+    background-color:            black / 10%;
+    cursor:                      "default";
 }
 
-/* Slide In */
-@keyframes slideIn {
-  0% {
-     opacity: 0;
-  }
-
-  100% {
-     opacity: 1;
-  }
+/*****----- Main Box -----*****/
+mainbox {
+    enabled:                     true;
+    spacing:                     100px;
+    margin:                      0px;
+    padding:                     100px 225px;
+    border:                      0px solid;
+    border-radius:               0px 0px 0px 0px;
+    border-color:                @selected;
+    background-color:            transparent;
+    children:                    [ "inputbar", "listview" ];
 }
 
-/* Inner Box */
-#inner-box {
-  margin: 5px;
-  padding: 10px;
-  border: none;
-  background-color: @base;
-  animation: fadeIn 0.5s ease-in-out both;
+/*****----- Inputbar -----*****/
+inputbar {
+    enabled:                     true;
+    spacing:                     10px;
+    margin:                      0% 28%;
+    padding:                     10px;
+    border:                      1px solid;
+    border-radius:               6px;
+    border-color:                white / 25%;
+    background-color:            white / 5%;
+    text-color:                  @foreground;
+    children:                    [ "prompt", "entry" ];
 }
 
-/* Fade In */
-@keyframes fadeIn {
-  0% {
-     opacity: 0;
-  }
-
-  100% {
-     opacity: 1;
-  }
+prompt {
+    enabled:                     true;
+    background-color:            transparent;
+    text-color:                  inherit;
+}
+textbox-prompt-colon {
+    enabled:                     true;
+    expand:                      false;
+    str:                         "::";
+    background-color:            transparent;
+    text-color:                  inherit;
+}
+entry {
+    enabled:                     true;
+    background-color:            transparent;
+    text-color:                  inherit;
+    cursor:                      text;
+    placeholder:                 "Search";
+    placeholder-color:           inherit;
 }
 
-/* Outer Box */
-#outer-box {
-  margin: 5px;
-  padding: 10px;
-  border: none;
-  background-color: @base;
+/*****----- Listview -----*****/
+listview {
+    enabled:                     true;
+    columns:                     7;
+    lines:                       4;
+    cycle:                       true;
+    dynamic:                     true;
+    scrollbar:                   false;
+    layout:                      vertical;
+    reverse:                     false;
+    fixed-height:                true;
+    fixed-columns:               true;
+    
+    spacing:                     0px;
+    margin:                      0px;
+    padding:                     0px;
+    border:                      0px solid;
+    border-radius:               0px;
+    border-color:                @selected;
+    background-color:            transparent;
+    text-color:                  @foreground;
+    cursor:                      "default";
+}
+scrollbar {
+    handle-width:                5px ;
+    handle-color:                @selected;
+    border-radius:               0px;
+    background-color:            @background-alt;
 }
 
-/* Scroll */
-#scroll {
-  margin: 0px;
-  padding: 10px;
-  border: none;
-  background-color: @base;
+/*****----- Elements -----*****/
+element {
+    enabled:                     true;
+    spacing:                     15px;
+    margin:                      0px;
+    padding:                     35px 10px;
+    border:                      0px solid;
+    border-radius:               15px;
+    border-color:                @selected;
+    background-color:            transparent;
+    text-color:                  @foreground;
+    orientation:                 vertical;
+    cursor:                      pointer;
+}
+element normal.normal {
+    background-color:            transparent;
+    text-color:                  @foreground;
+}
+element selected.normal {
+    background-color:            white / 5%;
+    text-color:                  @foreground;
+}
+element-icon {
+    background-color:            transparent;
+    text-color:                  inherit;
+    size:                        72px;
+    cursor:                      inherit;
+}
+element-text {
+    background-color:            transparent;
+    text-color:                  inherit;
+    highlight:                   inherit;
+    cursor:                      inherit;
+    vertical-align:              0.5;
+    horizontal-align:            0.5;
 }
 
-/* Input */
-#input {
-  margin: 5px 20px;
-  padding: 10px;
-  border: none;
-  border-radius: 0.1em;
-  color: @text;
-  background-color: @base;
-  animation: fadeIn 0.5s ease-in-out both;
+/*****----- Message -----*****/
+error-message {
+    padding:                     100px;
+    border:                      0px solid;
+    border-radius:               0px;
+    border-color:                @selected;
+    background-color:            black / 10%;
+    text-color:                  @foreground;
 }
-
-#input image {
-    border: none;
-    color: @red;
-}
-
-#input * {
-  outline: 4px solid @red!important;
-}
-
-/* Text */
-#text {
-  margin: 5px;
-  border: none;
-  color: @text;
-  animation: fadeIn 0.5s ease-in-out both;
-}
-
-#entry {
-  background-color: @base;
-}
-
-#entry arrow {
-  border: none;
-  color: @lavender;
-}
-
-/* Selected Entry */
-#entry:selected {
-  border: 0.11em solid @lavender;
-}
-
-#entry:selected #text {
-  color: @mauve;
-}
-
-#entry:drop(active) {
-  background-color: @lavender!important;
+textbox {
+    background-color:            transparent;
+    text-color:                  @foreground;
+    vertical-align:              0.5;
+    horizontal-align:            0.0;
+    highlight:                   none;
 }
 '';
   };
