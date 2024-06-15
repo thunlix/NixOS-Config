@@ -34,6 +34,7 @@
     (./. + "../../../user/shell/sh.nix")
     (./. + "../../../user/app/browser/librewolf.nix")
     (./. + "../../../user/app/popsicle.nix")
+    (./. + "../../../user/app/immersed-vr.nix")
     (./. +  "../../../user/wm"+("/"+userSettings.wm+"/"+userSettings.wm)+".nix") # My window manager selected from flake
   ];
   # Home Manager needs a bit of information about you and the paths it should

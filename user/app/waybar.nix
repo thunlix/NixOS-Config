@@ -324,7 +324,7 @@ label:focus {
     background: rgba(0, 0, 0, 0.2);
 }
     '';
-    settings = {
+/*    settings = {
       mainbar = {
     "layer": "top",
     "position": "bottom",
@@ -474,6 +474,6 @@ label:focus {
         "on-click": "alacritty -e yay -Syu"
     }
       };
-    };
+    };*/
   };
 }

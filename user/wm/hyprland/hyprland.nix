@@ -88,7 +88,7 @@
         ", code:67, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
         "$mod, L, exec, hyprlock"
         ", code:72, exec, grim -g \"$(slurp -d)\" - | wl-copy"
-        ", code:73, exec, brightnessctl -s set 10%-"
+        ", code:73, exec, brightnessctl -s set 10%+"
         ", code:74, exec, brightnessctl -s set -10%"
         ", code:156, togglespecialworkspace,"
       ];
