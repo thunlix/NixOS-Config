@@ -28,7 +28,7 @@
       (./. + "../../../system/shadowsocks.nix")
       (./. + "../../../system/waydroid.nix")
       (./. + "../../../system/yubikey.nix")
-
+      (./. + "../../../system/network-bridge.nix")
       # Laptop specific
       (./. + "../../../system/app/supergfxctl.nix")
       (./. + "../../../user/app/asusctl.nix")
