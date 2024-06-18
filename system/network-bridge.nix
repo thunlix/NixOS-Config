@@ -9,7 +9,7 @@
     };
   };
   networking.interfaces.br0.ipv4.addresses = [ {
-    address = "192.168.42.9";
+    address = "192.168.42.12";
     prefixLength = 24;
   } ];
   networking.defaultGateway = "192.168.42.1";
