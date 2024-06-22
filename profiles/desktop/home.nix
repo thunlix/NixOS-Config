@@ -35,6 +35,7 @@
     (./. + "../../../user/app/browser/librewolf.nix")
     (./. + "../../../user/app/popsicle.nix")
     (./. + "../../../user/app/immersed-vr.nix")
+    (./. + "../../../user/app/nodejs.nix")
     # (./. + "../../../user/app/wayvnc.nix")
     (./. +  "../../../user/wm"+("/"+userSettings.wm+"/"+userSettings.wm)+".nix") # My window manager selected from flake
   ];

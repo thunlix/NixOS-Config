@@ -128,8 +128,8 @@
         gaps_in = "5";
         gaps_out = "10";
         border_size = "2";
-        "col.active_border" = "rgba(f05454aa) rgba(f05454aa) 45deg";
-        "col.inactive_border" = "rgba(595959aa)";
+        "col.active_border" = "rgba(fb4934aa) rgba(fb4934aa) 45deg";
+        "col.inactive_border" = "rgba(928374aa)";
         layout = "dwindle";
       };
      
