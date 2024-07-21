@@ -12,7 +12,7 @@
     (./. + "../../../user/app/brightnessctl.nix")
     (./. + "../../../user/app/xdg-desktop-portal-hyprland.nix")
     (./. + "../../../user/app/hyprpicker.nix")
-    (./. + "../../../user/app/youtube-dl.nix")
+    #(./. + "../../../user/app/youtube-dl.nix")
     (./. + "../../../user/app/ncmpcpp.nix")
     (./. + "../../../user/app/cava.nix")
     (./. + "../../../user/app/btop.nix")
